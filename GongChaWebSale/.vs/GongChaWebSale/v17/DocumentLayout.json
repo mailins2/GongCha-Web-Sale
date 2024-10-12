@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\source\\GongChaWebSale\\",
+  "WorkspaceRootPath": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\nguye\\source\\gongchawebsale\\gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\nguye\\source\\GongChaWebSale\\gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\nguye\\source\\github\\gongchawebsale\\gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\nguye\\source\\GongChaWebSale\\gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,29 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "GongChaWebSale\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T07:34:39.592Z"
+              "WhenOpened": "2024-10-12T07:34:39.592Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_LayoutPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
               "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
               "RelativeToolTip": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-30T14:04:11.006Z",
               "EditorCaption": ""
@@ -53,9 +54,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "GongChaWebSale\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\Github\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
               "RelativeToolTip": "GongChaWebSale\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

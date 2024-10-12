@@ -104,6 +104,12 @@
     <Content Include="Images\fblogo.png" />
     <Content Include="Images\insta-logo.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\panner1.jpg" />
+    <Content Include="Images\panner2.jpg" />
+    <Content Include="Images\panner3.jpg" />
+    <Content Include="Images\panner4.jpg" />
+    <Content Include="Images\panner5.jpg" />
+    <Content Include="Images\panner6.jpg" />
     <Content Include="Images\zalo-logo.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
