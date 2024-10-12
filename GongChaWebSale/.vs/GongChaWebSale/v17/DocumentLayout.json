@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\nguye\\source\\gongchawebsale\\gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\nguye\\source\\GongChaWebSale\\gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -34,8 +34,7 @@
               "RelativeToolTip": "GongChaWebSale\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T07:34:39.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T07:34:39.592Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
               "ToolTip": "C:\\Users\\nguye\\source\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
               "RelativeToolTip": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-30T14:04:11.006Z",
               "EditorCaption": ""
@@ -60,8 +59,7 @@
               "RelativeToolTip": "GongChaWebSale\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T13:55:52.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T13:55:52.959Z"
             }
           ]
         }
