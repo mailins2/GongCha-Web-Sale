@@ -1,0 +1,1 @@
+theme-color: #D6DF7E,#187B25,#FAA49A,#C4391D
