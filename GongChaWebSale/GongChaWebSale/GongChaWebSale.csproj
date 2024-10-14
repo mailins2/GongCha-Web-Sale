@@ -110,6 +110,19 @@
     <Content Include="Images\panner4.jpg" />
     <Content Include="Images\panner5.jpg" />
     <Content Include="Images\panner6.jpg" />
+    <Content Include="Images\Tra-Sua-Dao.png" />
+    <Content Include="Images\Tra-sua-Earl-Grey-Carvia_web.png" />
+    <Content Include="Images\Tra-Sua-Xoai.png" />
+    <Content Include="Images\Trà-sữa-Chocolate-2.png" />
+    <Content Include="Images\Trà-sữa-Hokkaido-2.png" />
+    <Content Include="Images\Trà-sữa-Khoai-môn-2.png" />
+    <Content Include="Images\Trà-sữa-Oolong-2.png" />
+    <Content Include="Images\Trà-sữa-Oolong-3J-2.png" />
+    <Content Include="Images\Trà-sữa-Pudding-đậu-đỏ-2.png" />
+    <Content Include="Images\Trà-sữa-sương-sáo.png" />
+    <Content Include="Images\Trà-sữa-trà-xanh-1.png" />
+    <Content Include="Images\Trà-sữa-trà-đen-3.png" />
+    <Content Include="Images\Trà-sữa-Trân-châu-đen-1.png" />
     <Content Include="Images\zalo-logo.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -126,6 +139,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +200,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
