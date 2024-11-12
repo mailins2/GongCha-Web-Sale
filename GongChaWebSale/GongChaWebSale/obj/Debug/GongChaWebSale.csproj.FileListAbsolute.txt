@@ -302,3 +302,30 @@ E:\Project\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSa
 E:\Project\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.csproj.CopyComplete
 E:\Project\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.dll
 E:\Project\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.pdb
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\GongChaWebSale.dll.config
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\GongChaWebSale.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\GongChaWebSale.pdb
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\EntityFramework.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\EntityFramework.SqlServer.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\Microsoft.Web.Infrastructure.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Helpers.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Mvc.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Razor.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.Deployment.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.Razor.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\EntityFramework.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\EntityFramework.SqlServer.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Razor.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.Deployment.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Webpages.Razor.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Helpers.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\System.Web.Mvc.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.csproj.AssemblyReference.cache
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.csproj.CoreCompileInputs.cache
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaW.62F9FAD0.Up2Date
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.dll
+D:\Học tập\lập trình web\New folder (2)\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.pdb
