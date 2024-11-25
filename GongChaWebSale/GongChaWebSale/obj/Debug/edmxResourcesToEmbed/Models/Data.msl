@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities3">
+    <EntitySetMapping Name="banggia">
+      <EntityTypeMapping TypeName="Database1Model.banggia">
+        <MappingFragment StoreEntitySet="banggia">
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chitietdh">
+      <EntityTypeMapping TypeName="Database1Model.chitietdh">
+        <MappingFragment StoreEntitySet="chitietdh">
+          <ScalarProperty Name="madh" ColumnName="madh" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="matp" ColumnName="matp" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="thutu" ColumnName="thutu" />
+          <ScalarProperty Name="tongtiensp" ColumnName="tongtiensp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="danhgia">
+      <EntityTypeMapping TypeName="Database1Model.danhgia">
+        <MappingFragment StoreEntitySet="danhgia">
+          <ScalarProperty Name="madh" ColumnName="madh" />
+          <ScalarProperty Name="matk" ColumnName="matk" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="ngaydg" ColumnName="ngaydg" />
+          <ScalarProperty Name="sosao" ColumnName="sosao" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="donhang">
+      <EntityTypeMapping TypeName="Database1Model.donhang">
+        <MappingFragment StoreEntitySet="donhang">
+          <ScalarProperty Name="madh" ColumnName="madh" />
+          <ScalarProperty Name="tgdat" ColumnName="tgdat" />
+          <ScalarProperty Name="matk" ColumnName="matk" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+          <ScalarProperty Name="matrangthai" ColumnName="matrangthai" />
+          <ScalarProperty Name="thanhtoan" ColumnName="thanhtoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giohang">
+      <EntityTypeMapping TypeName="Database1Model.giohang">
+        <MappingFragment StoreEntitySet="giohang">
+          <ScalarProperty Name="magh" ColumnName="magh" />
+          <ScalarProperty Name="matk" ColumnName="matk" />
+          <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giohang_sanpham">
+      <EntityTypeMapping TypeName="Database1Model.giohang_sanpham">
+        <MappingFragment StoreEntitySet="giohang_sanpham">
+          <ScalarProperty Name="magh" ColumnName="magh" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="duong" ColumnName="duong" />
+          <ScalarProperty Name="da" ColumnName="da" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="tongtiensp" ColumnName="tongtiensp" />
+          <ScalarProperty Name="matp" ColumnName="matp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hoadon">
+      <EntityTypeMapping TypeName="Database1Model.hoadon">
+        <MappingFragment StoreEntitySet="hoadon">
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+          <ScalarProperty Name="madh" ColumnName="madh" />
+          <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+          <ScalarProperty Name="giamgia" ColumnName="giamgia" />
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+          <ScalarProperty Name="matk" ColumnName="matk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="khuyenmai">
+      <EntityTypeMapping TypeName="Database1Model.khuyenmai">
+        <MappingFragment StoreEntitySet="khuyenmai">
+          <ScalarProperty Name="makm" ColumnName="makm" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+          <ScalarProperty Name="ngayketthuc" ColumnName="ngayketthuc" />
+          <ScalarProperty Name="phantramgiam" ColumnName="phantramgiam" />
+          <ScalarProperty Name="tenkm" ColumnName="tenkm" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loaisp">
+      <EntityTypeMapping TypeName="Database1Model.loaisp">
+        <MappingFragment StoreEntitySet="loaisp">
+          <ScalarProperty Name="maloaisp" ColumnName="maloaisp" />
+          <ScalarProperty Name="tenloaisp" ColumnName="tenloaisp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loaitk">
+      <EntityTypeMapping TypeName="Database1Model.loaitk">
+        <MappingFragment StoreEntitySet="loaitk">
+          <ScalarProperty Name="maloaitk" ColumnName="maloaitk" />
+          <ScalarProperty Name="tenloaitk" ColumnName="tenloaitk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanpham">
+      <EntityTypeMapping TypeName="Database1Model.sanpham">
+        <MappingFragment StoreEntitySet="sanpham">
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="maloaisp" ColumnName="maloaisp" />
+          <ScalarProperty Name="hinh" ColumnName="hinh" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taikhoan">
+      <EntityTypeMapping TypeName="Database1Model.taikhoan">
+        <MappingFragment StoreEntitySet="taikhoan">
+          <ScalarProperty Name="matk" ColumnName="matk" />
+          <ScalarProperty Name="tentk" ColumnName="tentk" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="hinh" ColumnName="hinh" />
+          <ScalarProperty Name="maloaitk" ColumnName="maloaitk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="topping">
+      <EntityTypeMapping TypeName="Database1Model.topping">
+        <MappingFragment StoreEntitySet="topping">
+          <ScalarProperty Name="matp" ColumnName="matp" />
+          <ScalarProperty Name="tentp" ColumnName="tentp" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="hinh" ColumnName="hinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trangthaidonhang">
+      <EntityTypeMapping TypeName="Database1Model.trangthaidonhang">
+        <MappingFragment StoreEntitySet="trangthaidonhang">
+          <ScalarProperty Name="matrangthai" ColumnName="matrangthai" />
+          <ScalarProperty Name="tentrangthai" ColumnName="tentrangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
