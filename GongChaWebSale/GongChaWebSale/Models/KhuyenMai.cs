@@ -23,6 +23,13 @@ namespace GongChaWebSale.Models
         public decimal Ptgiam { get; set; } = 0;
         public string Tenkm {  get; set; }
         public string Noidung {  get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime NgayBatDau { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [Date("NgayBatDau", ErrorMessage = "Ngày kết thúc phải lớn hơn ngày bắt đầu.")]
+        public DateTime NgayKetThuc { get; set; }
         public virtual sanpham Sanpham { get; set; }
         public virtual banggia Banggia { get; set; }
     }

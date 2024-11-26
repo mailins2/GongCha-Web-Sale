@@ -182,10 +182,15 @@
     <Compile Include="Migrations\202411260635082_AddDatabase.Designer.cs">
       <DependentUpon>202411260635082_AddDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411261424232_AddKhuyenMai.cs" />
+    <Compile Include="Migrations\202411261424232_AddKhuyenMai.Designer.cs">
+      <DependentUpon>202411261424232_AddKhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\banggia.cs" />
     <Compile Include="Models\chitietdonhang.cs" />
     <Compile Include="Models\danhgia.cs" />
+    <Compile Include="Models\DateAtrribute.cs" />
     <Compile Include="Models\donhang.cs" />
     <Compile Include="Models\giohang.cs" />
     <Compile Include="Models\giohang_sanpham.cs" />
@@ -222,6 +227,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202411260635082_AddDatabase.resx">
       <DependentUpon>202411260635082_AddDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411261424232_AddKhuyenMai.resx">
+      <DependentUpon>202411261424232_AddKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
