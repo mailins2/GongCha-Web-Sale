@@ -12,10 +12,10 @@ namespace GongChaWebSale.Models
         [Column(Order = 1)] 
         public int MaSP { get; set; }
         [Key]
-        [Column(Order = 2)] 
-        [StringLength(1)] 
-        [RegularExpression("M|L", ErrorMessage = "Size phải là 'M' hoặc 'L'.")] 
-        public string Size { get; set; }
+        [Column(Order = 2)]
+        [StringLength(1)]
+        [RegularExpression("M|L", ErrorMessage = "Size phải là 'M' hoặc 'L'.")]
+        public string Size { get; set; } = "M";
         [Required]
         [Range(0, double.MaxValue, ErrorMessage = "Đơn giá phải lớn hơn hoặc bằng 0.")] 
         public decimal DonGia { get; set; } 

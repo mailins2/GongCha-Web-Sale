@@ -13,7 +13,7 @@ namespace GongChaWebSale.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202411260245029_AddDatabase"; }
+            get { return "202411260635082_AddDatabase"; }
         }
         
         string IMigrationMetadata.Source

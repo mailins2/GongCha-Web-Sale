@@ -532,3 +532,5 @@ E:\Gongcha\1\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWeb
 E:\Gongcha\1\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.pdb
 E:\Gongcha\1\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.Migrations.AddDatabase.resources
 E:\Gongcha\1\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.csproj.GenerateResource.cache
+C:\Users\nguye\source\Github\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.Migrations.AddDatabase.resources
+C:\Users\nguye\source\Github\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.csproj.GenerateResource.cache

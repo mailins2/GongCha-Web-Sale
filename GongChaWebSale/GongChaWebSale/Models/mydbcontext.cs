@@ -8,7 +8,7 @@ namespace GongChaWebSale.Models
 {
     public class mydbcontext:DbContext
     {
-        public mydbcontext() : base("mycs") { }
+        public mydbcontext() : base("MYCS") { }
         public DbSet <LoaiTaiKhoan> Loaitks { get; set; }
         public DbSet <taikhoan> Taikhoans { get; set; }
         public DbSet<loaisp> Loaisps { get; set; }
@@ -23,6 +23,6 @@ namespace GongChaWebSale.Models
         public DbSet <chitietdonhang> Chitietdonhangs { get; set; }
         public DbSet<hoadon> Hoadons { get; set; }
         public DbSet<danhgia> Danhgias { get; set; }
-
+        public DbSet<KhuyenMai> khuyenMais {  get; set; }
     }
 }

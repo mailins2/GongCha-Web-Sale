@@ -97,13 +97,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\mydb.mdf" />
-    <Content Include="App_Data\mydb_log.ldf">
-      <DependentUpon>mydb.mdf</DependentUpon>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Images\fblogo.png" />
@@ -182,9 +178,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202411260245029_AddDatabase.cs" />
-    <Compile Include="Migrations\202411260245029_AddDatabase.designer.cs">
-      <DependentUpon>202411260245029_AddDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\202411260635082_AddDatabase.cs" />
+    <Compile Include="Migrations\202411260635082_AddDatabase.Designer.cs">
+      <DependentUpon>202411260635082_AddDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\banggia.cs" />
@@ -194,6 +190,7 @@
     <Compile Include="Models\giohang.cs" />
     <Compile Include="Models\giohang_sanpham.cs" />
     <Compile Include="Models\hoadon.cs" />
+    <Compile Include="Models\KhuyenMai.cs" />
     <Compile Include="Models\loaisp.cs" />
     <Compile Include="Models\LoaiTaiKhoan.cs" />
     <Compile Include="Models\mydbcontext.cs" />
@@ -223,8 +220,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202411260245029_AddDatabase.resx">
-      <DependentUpon>202411260245029_AddDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202411260635082_AddDatabase.resx">
+      <DependentUpon>202411260635082_AddDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

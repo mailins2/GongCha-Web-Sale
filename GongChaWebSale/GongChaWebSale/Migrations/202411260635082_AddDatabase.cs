@@ -198,20 +198,28 @@
                 .Index(t => t.MaDH)
                 .Index(t => t.MaTK);
             
-            DropTable("dbo.loaitks");
+            CreateTable(
+                "dbo.KhuyenMais",
+                c => new
+                    {
+                        Makm = c.String(nullable: false, maxLength: 128),
+                        MaSP = c.Int(nullable: false),
+                        Size = c.String(nullable: false, maxLength: 1),
+                        Ptgiam = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Tenkm = c.String(),
+                        Noidung = c.String(),
+                    })
+                .PrimaryKey(t => new { t.Makm, t.MaSP, t.Size })
+                .ForeignKey("dbo.banggias", t => new { t.MaSP, t.Size }, cascadeDelete: false)
+                .ForeignKey("dbo.sanphams", t => t.MaSP, cascadeDelete: false)
+                .Index(t => new { t.MaSP, t.Size });
+            
         }
         
         public override void Down()
         {
-            CreateTable(
-                "dbo.loaitks",
-                c => new
-                    {
-                        maloaitk = c.Int(nullable: false, identity: true),
-                        tenloaitk = c.String(),
-                    })
-                .PrimaryKey(t => t.maloaitk);
-            
+            DropForeignKey("dbo.KhuyenMais", "MaSP", "dbo.sanphams");
+            DropForeignKey("dbo.KhuyenMais", new[] { "MaSP", "Size" }, "dbo.banggias");
             DropForeignKey("dbo.hoadons", "MaTK", "dbo.taikhoans");
             DropForeignKey("dbo.hoadons", "MaDH", "dbo.donhangs");
             DropForeignKey("dbo.giohang_sanpham", "MaTP", "dbo.toppings");
@@ -229,6 +237,7 @@
             DropForeignKey("dbo.taikhoans", "MaLoaiTK", "dbo.LoaiTaiKhoans");
             DropForeignKey("dbo.banggias", "MaSP", "dbo.sanphams");
             DropForeignKey("dbo.sanphams", "MaLoaiSP", "dbo.loaisps");
+            DropIndex("dbo.KhuyenMais", new[] { "MaSP", "Size" });
             DropIndex("dbo.hoadons", new[] { "MaTK" });
             DropIndex("dbo.hoadons", new[] { "MaDH" });
             DropIndex("dbo.giohangs", new[] { "MaTK" });
@@ -246,6 +255,7 @@
             DropIndex("dbo.chitietdonhangs", new[] { "MaDH" });
             DropIndex("dbo.sanphams", new[] { "MaLoaiSP" });
             DropIndex("dbo.banggias", new[] { "MaSP" });
+            DropTable("dbo.KhuyenMais");
             DropTable("dbo.hoadons");
             DropTable("dbo.giohangs");
             DropTable("dbo.giohang_sanpham");
