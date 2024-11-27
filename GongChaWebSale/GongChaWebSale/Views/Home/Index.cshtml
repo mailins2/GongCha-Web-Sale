@@ -1,6 +1,70 @@
-﻿
+﻿@model List<GongChaWebSale.Models.KhuyenMai>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
+@*slide-show**@
+<div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/Images/panner3.jpg" class="d-block w-100" style="height:500px" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/panner4.jpg" class="d-block w-100" style="height:500px" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/panner5.jpg" class="d-block w-100" style="height:500px" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/panner6.jpg" class="d-block w-100" style="height:500px" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+@*Giam gia*@
+<div style="margin: 40px 15%;">
+    <h2 style="margin-bottom: 20px">ƯU ĐÃI ĐẶC BIỆT</h2>
+    @foreach (var item in Model.GroupBy(row => row.Tenkm).Select(row => row.Key).ToList())
+    {
+        <div style="padding-right:7%;width:100%">
+            <h3 style="justify-self: start; margin-top: 5%; color: #187B25; padding: 10px; width: 100%; background-color: #D6DF7E;text-transform:capitalize">@item</h3>
+            <a href="" style="text-decoration: none"><h5 class="d-flex justify-content-end text-danger">Xem thêm -></h5></a>
+        </div>
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr; margin: 20px 0">
+            @foreach (var sp in Model.Where(row => row.Tenkm == item && row.Size == "M").Take(3))
+            {
+                <div class="card" style="width: 18rem; box-shadow: 0px 0px 5px 5px #eeeeee;position:relative">
+                    <a href="" style="text-decoration:none">
+                        <div style="border-radius: 100%; padding: 10px; background-color: #FAA49A; width: 45px; height: 45px; display: flex; justify-content: center; align-content: center; position: absolute; top: 10px; right: 10px ">
+                            <p style="font-weight: bold; color: #C4391D ">@((sp.Ptgiam *100).ToString("0"))%</p>
+                        </div>
+                        <img src="@Url.Content(sp.Sanpham.Hinh)" class="card-img-top" alt="@sp.Sanpham.TenSP">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate overflow-hidden" style="color:#187B25">@sp.Sanpham.TenSP</h5>
+                            <p class="card-text text-truncate overflow-hidden" style="color:gray">@sp.Sanpham.MoTa</p>
+                            <div style="width:50%">
+                                <h3 class="card-text" style="color: #C4391D;font-weight:bold">@(((sp.Banggia.DonGia)-(sp.Banggia.DonGia * sp.Ptgiam)).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</h3>
+                                <p class="card-text" style="text-decoration:line-through;color:grey">@sp.Banggia.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <a href="" class="btn btn-outline-danger" style="width:80%;margin-right:5px;">Mua ngay</a>
+                                <a href="#" class="btn" style="background-color: #C4391D; display: flex; justify-content: center; align-items: center"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</div>   

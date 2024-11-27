@@ -3,10 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.toppings.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.KhuyenMais.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.sanphams.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\views\\saleoff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\saleoff\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\controllers\\saleoffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\controllers\\saleoffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,21 +34,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.toppings [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.toppings.sql",
-              "ToolTip": "dbo.toppings [Data]",
+              "Title": "dbo.KhuyenMais [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.KhuyenMais.sql",
+              "ToolTip": "dbo.KhuyenMais [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-27T17:10:51.772Z",
+              "WhenOpened": "2024-11-27T23:33:39.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GongChaWebSale\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T21:51:54.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "dbo.sanphams [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ACER_ONEDRIVE_\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8_GITHUB_GONGCHA_WEB_SALE_GONGCHAWEBSALE_GONGCHAWEBSALE_APP_DATA_DATABASE.MDF/True/SqlTable/dbo.sanphams.sql",
-              "ToolTip": "dbo.sanphams [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-27T17:10:44.009Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\SaleOff\\Index.cshtml",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Views\\SaleOff\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\SaleOff\\Index.cshtml",
+              "RelativeToolTip": "GongChaWebSale\\Views\\SaleOff\\Index.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwBsAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T21:50:46.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SaleOffController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\SaleOffController.cs",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Controllers\\SaleOffController.cs",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\SaleOffController.cs",
+              "RelativeToolTip": "GongChaWebSale\\Controllers\\SaleOffController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T21:50:21.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "GongChaWebSale\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAACsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T19:57:04.57Z",
               "EditorCaption": ""
             }
           ]

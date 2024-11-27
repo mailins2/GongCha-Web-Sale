@@ -103,6 +103,7 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Images\fblogo.png" />
+    <Content Include="Images\ginger4.395x280-2.jpg" />
     <Content Include="Images\insta-logo.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\panner1.jpg" />
@@ -174,6 +175,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SaleOffController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,6 +216,7 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\SaleOff\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -232,6 +235,7 @@
       <DependentUpon>202411261424232_AddKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

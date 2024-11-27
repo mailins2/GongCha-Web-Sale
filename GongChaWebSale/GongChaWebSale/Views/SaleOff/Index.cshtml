@@ -1,0 +1,55 @@
+﻿@model List<GongChaWebSale.Models.KhuyenMai>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div style="display: flex; margin-top: 30px">
+    <div style="width:20%;">
+        <div class="list-group">
+            @foreach (var item in Model.GroupBy(row=>row.Tenkm).Select(row=>row.Key).ToList())
+            {
+                <a href="" style="text-decoration:none">
+                    <button type="button" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" aria-current="true">
+                        @item
+                        <span class="badge bg-primary rounded-pill">@Model.Where(row => row.Tenkm == item && row.Size == "M").Count()</span>
+                    </button>
+                </a>
+            }
+        </div>
+    </div>
+    <div style="margin-left:20px;width:80%">
+        @if(ViewBag.makm == null)
+        {
+            ViewBag.makm = Model.Select(row => row.Makm).FirstOrDefault();
+        }
+        <h3>@Model.Where(row=>row.Makm == ViewBag.makm).Select(row=>row.Tenkm).FirstOrDefault()</h3>
+        <p>@Model.Where(row => row.Makm == ViewBag.makm).Select(row=>row.Noidung).FirstOrDefault()</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;column-gap:20px;row-gap:30px;padding:20px">
+            @foreach (var sp in Model.Where(row => row.Makm == ViewBag.makm).ToList())
+            {
+                <div class="card" style="width: 18rem; box-shadow: 0px 0px 5px 5px #eeeeee;position:relative">
+                    <a href="" style="text-decoration:none">
+                        <div style="border-radius: 100%; padding: 10px; background-color: #FAA49A; width: 45px; height: 45px; display: flex; justify-content: center; align-content: center; position: absolute; top: 10px; right: 10px ">
+                            <p style="font-weight: bold; color: #C4391D ">@((sp.Ptgiam * 100).ToString("0"))%</p>
+                        </div>
+                        <img src="@Url.Content(sp.Sanpham.Hinh)" class="card-img-top" alt="@sp.Sanpham.TenSP">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate overflow-hidden" style="color:#187B25">@sp.Sanpham.TenSP</h5>
+                            <p class="card-text text-truncate overflow-hidden" style="color:gray">@sp.Sanpham.MoTa</p>
+                            <div style="width:50%">
+                                <h3 class="card-text" style="color: #C4391D;font-weight:bold">@(((sp.Banggia.DonGia) - (sp.Banggia.DonGia * sp.Ptgiam)).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</h3>
+                                <p class="card-text" style="text-decoration:line-through;color:grey">@sp.Banggia.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <a href="" class="btn btn-outline-danger" style="width:80%;margin-right:5px;">Mua ngay</a>
+                                <a href="#" class="btn" style="background-color: #C4391D; display: flex; justify-content: center; align-items: center"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i></a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+          </div>
+</div>
+
+
