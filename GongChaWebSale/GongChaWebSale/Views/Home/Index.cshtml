@@ -4,7 +4,42 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
+
 @*slide-show**@
+<style>
+    #successMessage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: 250px;
+        border-radius: 10px;
+    }
+
+    #successMessage button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    #successMessage p {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" id="successMessage">
+        <button onclick="closeMessage()" class="btn btn-small btn-warning"><i class='bx bx-x'></i></button>
+        <p style="margin: 0;">@TempData["Message"]</p>
+    </div>
+
+
+
+}
 <div>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -68,3 +103,9 @@
         </div>
     }
 </div>   
+<script type="text/javascript">
+    function closeMessage() {
+        var message = document.getElementById("successMessage");
+        message.style.display = "none";
+    }
+</script>

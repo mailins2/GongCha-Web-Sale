@@ -1,4 +1,4 @@
-﻿
+﻿@model GongChaWebSale.Models.taikhoan
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
@@ -9,7 +9,7 @@
         <div class="col-6 mb-5 mt-5">
             <img src="~/Images/poster.jpg" width="95%" style="margin-left:10px" class="object-fit-cover border rounded" alt="Error">
         </div>
-        <form class="col-6 mb-5 mt-5" action="/User/Register">
+        <form class="col-6 mb-5 mt-5" action="/User/Register" method="post">
 
             <table class=" d-flex justify-content-end" style="margin-left:10px;border-collapse:separate;border-spacing:20px;">
                 <tr>
@@ -17,24 +17,21 @@
                         TẠO TÀI KHOẢN
                     </th>
                 </tr>
-                <tr>
-                    <td>
-                        <label class="form-label" for="LastName">Họ của bạn</label>
-                        <input class="form-control" type="text" placeholder="Họ của bạn" id="LastName" name="LastName" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" />
-                    </td>
-                </tr>
-                <tr>
 
+                <tr>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <td>
-                        <label class="form-label" for="FirstName">Tên của bạn</label>
-                        <input class="form-control" type="text" placeholder="Tên của bạn * " id="FirstName" name="FirstName" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" />
+                        <label class="form-label" for="FirstName">Tên tài khoản </label>
+                        <input class="form-control" type="text" placeholder="Tên tài khoản của bạn * " id="FirstName" name="TenTK" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" required />
+                        @Html.ValidationMessageFor(model => model.TenTK, "", new { @class = "text-danger" })
                     </td>
 
                 </tr>
                 <tr>
                     <td>
                         <label class="form-label" for="PhoneNumber">Số điện thoại </label>
-                        <input class="form-control" type="tel" placeholder="Số điện thoại của bạn * " id="PhoneNumber" name="PhoneNumber" style="width:80%;border:none;outline:none;border-radius:0px;border-bottom:1px solid black" />
+                        <input class="form-control" type="tel" placeholder="Số điện thoại của bạn * " id="SDT" name="PhoneNumber" style="width:80%;border:none;outline:none;border-radius:0px;border-bottom:1px solid black" required />
+                        @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
                     </td>
                 </tr>
                 <tr>
@@ -42,17 +39,44 @@
                         <label class="form-label" for="Email">
                             Email của bạn
                         </label>
-                        <input class="form-control" type="email" placeholder="Email của bạn * " id="Email" name="Email" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" />
-
+                        <input class="form-control" type="email" placeholder="Email của bạn * " id="Email" name="Email" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" required />
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <tr class="form-group">
+                    <td>
+                        <label for="gender">Giới tính</label>
+                        <div style="display: flex; margin: 10px auto; width: 90%; padding: 8px 15px; ">
+                            <div class="form-check" style="margin-right:10px">
+                                <input class="form-check-input" type="radio" name="GioiTinh" id="male" value="Nam">
+                                <label class="form-check-label" for="male">Nam</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" id="female" value="Nữ">
+                                <label class="form-check-label" for="female">Nữ</label>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label class="form-label" for="PassWord">Mật khẩu của bạn</label>
-                        <input class="form-control" type="password" placeholder="Mật khẩu của bạn * " id="PassWord" name="PassWord" aria-describedby="passwordHelpBlock" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" />
+                        <input class="form-control" type="password" placeholder="Mật khẩu của bạn * " id="PassWord" name="MatKhau" aria-describedby="passwordHelpBlock" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" required />
                         <div id="passwordHelpBlock" class="form-text" style="width:80%">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                            Your password must be 6-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                         </div>
+                        @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label class="form-label" for="PassWord">Xác nhận mật khẩu của bạn</label>
+                        <input class="form-control" type="password" placeholder="Mật khẩu của bạn * " id="PassWord" name="PassWordAgain" aria-describedby="passwordHelpBlock" style="width: 80%; border: none; outline: none; border-radius: 0px; border-bottom: 1px solid black" required />
+                        <div id="passwordHelpBlock" class="form-text" style="width:80%">
+                            Your password must be 6-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div>
+                        @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
                     </td>
                 </tr>
 
