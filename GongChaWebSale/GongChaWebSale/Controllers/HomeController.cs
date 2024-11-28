@@ -13,9 +13,10 @@ namespace GongChaWebSale.Controllers
         mydbcontext db = new mydbcontext();
         public ActionResult Index()
         {
-            List<KhuyenMai> khuyenmai = db.khuyenMais.Where(row=>row.Size == "M" && row.NgayKetThuc>DateTime.Now).ToList();
-            
+            List<KhuyenMai> khuyenmai = db.khuyenMais.Where(row => row.Size == "M" && row.NgayKetThuc > DateTime.Now).ToList();
+
             return View(khuyenmai);
         }
+
     }
 }

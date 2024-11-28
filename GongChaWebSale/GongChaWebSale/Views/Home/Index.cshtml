@@ -16,19 +16,19 @@
         border-radius: 10px;
     }
 
-    #successMessage button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 3;
-    }
+        #successMessage button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+        }
 
-    #successMessage p {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        #successMessage p {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 </style>
 @if (TempData["Message"] != null)
 {
@@ -40,6 +40,7 @@
 
 
 }
+@*slide-show**@
 <div>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -74,7 +75,7 @@
     {
         <div style="padding-right:7%;width:100%">
             <h3 style="justify-self: start; margin-top: 5%; color: #187B25; padding: 10px; width: 100%; background-color: #D6DF7E;text-transform:capitalize">@item</h3>
-            <a href="" style="text-decoration: none"><h5 class="d-flex justify-content-end text-danger">Xem thêm -></h5></a>
+            <a href="/SaleOff/Index?makm=@Model.Where(row=>row.Tenkm ==item).Select(e=>e.Makm).FirstOrDefault()" style="text-decoration: none"><h5 class="d-flex justify-content-end text-danger">Xem thêm -></h5></a>
         </div>
         <div style="display:grid;grid-template-columns: 1fr 1fr 1fr; margin: 20px 0">
             @foreach (var sp in Model.Where(row => row.Tenkm == item && row.Size == "M").Take(3))
@@ -102,7 +103,8 @@
             }
         </div>
     }
-</div>   
+</div>
+
 <script type="text/javascript">
     function closeMessage() {
         var message = document.getElementById("successMessage");
