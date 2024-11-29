@@ -20,7 +20,10 @@ namespace GongChaWebSale.Models
         [Range(0, double.MaxValue, ErrorMessage = "Thành tiền phải lớn hơn hoặc bằng 0.")]
         public decimal ThanhTien { get; set; } = 0;
         [Required] 
-        public int MaTK { get; set; } 
+        public int MaTK { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime NgayTao { get; set; } = DateTime.Now;
         // Khóa ngoại
         public virtual donhang DonHang { get; set; } 
         public virtual taikhoan TaiKhoan { get; set; }

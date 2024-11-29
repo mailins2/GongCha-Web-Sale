@@ -13,7 +13,7 @@ namespace GongChaWebSale.Controllers
         mydbcontext db = new mydbcontext();
         public ActionResult Index()//Dang nhap
         {
-            
+
             return View();
         }
         [HttpPost]
@@ -22,26 +22,26 @@ namespace GongChaWebSale.Controllers
 
             if (ModelState.IsValid)
             {
-                var user = db.Taikhoans.FirstOrDefault(t=>t.Email == UserName || t.SDT == UserName);
-                if(user!=null)
+                var user = db.Taikhoans.FirstOrDefault(t => t.Email == UserName || t.SDT == UserName || t.TenTK == UserName);
+                if (user != null)
                 {
                     //if(BCrypt.Net.BCrypt.Verify(PassWord,user.MatKhau))
-                    if(PassWord==user.MatKhau)
+                    if (PassWord == user.MatKhau)
                     {
                         Session["UserName"] = user.TenTK;
                         Session["UserID"] = user.MaTK;
                         TempData["Message"] = "Đăng nhập thành công";
-                        if (user.MaLoaiTK==1)
+                        if (user.MaLoaiTK == 1)
                         {
                             Session["user"] = User;
-                          
-                            return RedirectToAction("Index", "Home");
-                        }
-                        if(user.MaLoaiTK==2)
-                        {
-                            Session["user"] = User;
-                       
+
                             return RedirectToAction("Index", "Admin");
+                        }
+                        if (user.MaLoaiTK == 2)
+                        {
+                            Session["user"] = User;
+
+                            return RedirectToAction("Index", "Home");
                         }
                     }
                     else
@@ -113,5 +113,94 @@ namespace GongChaWebSale.Controllers
             TempData["Message"] = "Đăng xuất thành công";
             return RedirectToAction("Index", "Home");
         }
+        public ActionResult ManageAccount()
+        {
+            if (ModelState.IsValid)
+            {
+                if (Session["UserID"] != null)
+                {
+                    int userId = (int)Session["UserID"];
+                    var user = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
+
+                    if (user != null)
+                    {
+                        return View(user);
+
+                    }
+
+
+                }
+            }
+            return RedirectToAction("Index", "User");
+        }
+
+        [HttpPost]
+        public ActionResult ManageAccount(taikhoan user) // Cập nhật thông tin tài khoản 
+        {
+            if (Session["UserID"] != null)
+            {
+                int userId = (int)Session["UserID"];
+                var existingUser = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
+
+                if (existingUser != null)
+                {
+                    // Cập nhật các thuộc tính của tài khoản hiện có
+                    existingUser.TenTK = user.TenTK;
+                    existingUser.Email = user.Email;
+                    existingUser.SDT = user.SDT;
+                    existingUser.DiaChi = user.DiaChi;
+                    existingUser.MatKhau = user.MatKhau;
+                    existingUser.NgaySinh = user.NgaySinh;
+                    // Thêm các thuộc tính khác cần cập nhật
+                    existingUser.MaLoaiTK = 2;
+
+                    // Lưu thay đổi vào cơ sở dữ liệu
+                    db.SaveChanges();
+                    TempData["Message"] = "Cập nhật thông tin thành công ";
+                }
+                else
+                {
+                    TempData["Message"] = "Không tìm thấy tài khoản";
+                }
+            }
+            else
+            {
+                TempData["Message"] = "Phiên làm việc của bạn đã hết. Vui lòng đăng nhập lại.";
+            }
+
+            return RedirectToAction("Index", "User");
+        }
+
+
+
+        public ActionResult HistoryPD(int id = 0)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Session["UserID"] != null)
+                {
+                    int userId = (int)Session["UserID"];
+
+                    List<chitietdonhang> ct = db.Chitietdonhangs.Where(row => row.DonHang.MaTrangThai == id && row.DonHang.MaTK == userId).ToList();
+
+                    List<donhang> dh = db.Donhangs.Where(t => t.MaTK == userId && t.MaTrangThai == id).ToList();
+                    ViewBag.dh = dh;
+                    List<trangthaidonhang> tt = db.Trangthaidonhangs.ToList();
+                    ViewBag.tt = tt;
+                    return View(ct);
+
+
+
+
+                }
+
+            }
+            return RedirectToAction("Index", "User");
+        }
+        public ActionResult DetailCart()
+        {
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,6 @@
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (2, 12, N'L', 1, NULL, NULL, 1, CAST(56000.00 AS Decimal(18, 2)))
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (2, 15, N'M', 3, NULL, NULL, 2, CAST(80000.00 AS Decimal(18, 2)))
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (3, 12, N'M', 5, NULL, NULL, 1, CAST(45000.00 AS Decimal(18, 2)))
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (4, 6, N'L', 1, NULL, NULL, 4, CAST(234000.00 AS Decimal(18, 2)))
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (5, 7, N'M', 5, NULL, NULL, 3, CAST(145000.00 AS Decimal(18, 2)))
+INSERT INTO [dbo].[giohang_sanpham] ([MaGH], [MaSP], [Size], [MaTP], [Duong], [Da], [SoLuong], [TongTienSP]) VALUES (5, 4, N'M', 3, NULL, NULL, 2, CAST(78000.00 AS Decimal(18, 2)))

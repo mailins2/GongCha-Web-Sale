@@ -225,6 +225,14 @@
     <Compile Include="Migrations\202411281522449_AddUplententk.designer.cs">
       <DependentUpon>202411281522449_AddUplententk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411291045300_AddNgayTaoOnHD.cs" />
+    <Compile Include="Migrations\202411291045300_AddNgayTaoOnHD.designer.cs">
+      <DependentUpon>202411291045300_AddNgayTaoOnHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411291047167_AddUpNgayTao.cs" />
+    <Compile Include="Migrations\202411291047167_AddUpNgayTao.designer.cs">
+      <DependentUpon>202411291047167_AddUpNgayTao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\banggia.cs" />
     <Compile Include="Models\chitietdonhang.cs" />
@@ -254,6 +262,9 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\SaleOff\Index.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageUser.cshtml" />
+    <Content Include="Views\User\ManageAccount.cshtml" />
+    <Content Include="Views\User\HistoryPD.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -285,6 +296,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411281522449_AddUplententk.resx">
       <DependentUpon>202411281522449_AddUplententk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411291045300_AddNgayTaoOnHD.resx">
+      <DependentUpon>202411291045300_AddNgayTaoOnHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411291047167_AddUpNgayTao.resx">
+      <DependentUpon>202411291047167_AddUpNgayTao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
