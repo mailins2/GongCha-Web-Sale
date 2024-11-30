@@ -1,0 +1,172 @@
+﻿@model List<GongChaWebSale.Models.banggia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between" style="margin:10px 20px;align-items:center">
+    <div class="d-flex">
+        <a href="/Admin/Index?order=0&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)&page=@ViewBag.page" ">
+            <button style="border:none;background-color: white">
+                <i class="fa-solid fa-arrow-up-wide-short fa-lg" style="color: #187B25;margin-right:10px"></i>
+            </button>
+        </a>
+        <a href="/Admin/Index?order=1&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)&page=@ViewBag.page" ">
+            <button style="border:none;background-color: white">
+                <i class="fa-solid fa-arrow-down-wide-short fa-lg" style="color: #187B25 "></i>
+            </button>
+        </a>
+    </div>
+    <div class="d-flex" style="align-items:center;">
+        <i class="fa-solid fa-filter fa-lg" style="color: #187B25; margin-right: 10px"></i>
+        <span style="font-size: 20px;width: 200px">Lọc sản phẩm theo :</span>
+        <form action="/Admin/Index" method="get">
+            <input type="hidden" name="order" value="@(Request["order"] ?? string.Empty)" />
+            <input type="hidden" name="loaisp" value="@(Request["loaisp"] ?? string.Empty)" />
+            <input type="hidden" name="page" value="@ViewBag.page" />
+            <select name="size" style="width: 100px" class="form-select" aria-label=".form-select-lg example" onchange="this.form.submit()">
+                <option selected disabled>Size</option>
+                <option value="" @(Request["size"] == "" ? "selected" : "")>Tất cả</option>
+                @foreach (var item in ViewBag.size)
+                {
+                    <option value="@item" @(Request["size"] != null && Request["size"].ToString() == item ? "selected" : "")>
+                        @item
+                    </option>
+                }
+            </select>
+        </form>
+        <form action="/Admin/Index" method="get">
+            <input type="hidden" name="order" value="@(Request["order"] ?? (object)"")" />
+            <input type="hidden" name="size" value="@(Request["size"] ?? (object)"")" />
+            <input type="hidden" name="page" value="@ViewBag.page" />
+            <select name="loaisp" style="width: 300px" class="form-select" aria-label=".form-select-lg example" onchange="this.form.submit()">
+                <option disabled>Loại sản phẩm</option>
+                <option value="" @(Request["loaisp"] == "" ? "selected" : "")>Tất cả</option>
+                @foreach (var item in ViewBag.loaisp)
+                {
+                    <option value="@item" @(Request["loaisp"] != null && Request["loaisp"].ToString() == item ? "selected" : "")>
+                        @item
+                    </option>
+                }
+            </select>
+        </form>
+
+    </div>
+    <a href="/Admin/Create">
+        <button type="button" class="btn btn-outline-success">Thêm sản phẩm</button>
+    </a>
+</div>
+<table class="table" style="height:80%;margin-left:20px;">
+    <thead>
+        <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Size</th>
+            <th scope="col">Đơn giá</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Hình ảnh</th>
+            <th scope="col">Loại sản phẩm</th>
+            <th scope="col">Chỉnh sửa</th>
+            <th scope="col">Xóa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var stt = ViewBag.sttstart;
+        }
+        @foreach (var sp in Model)
+        {
+            <tr>
+                <th scope="row" style="width:5%">@stt</th>
+                <td style="width:15%">@sp.SanPham.TenSP</td>
+                <td style="width:5%">@sp.Size</td>
+                <td style="width:10%">@sp.DonGia.ToString("N0") đ</td>
+                <td style="word-wrap: break-word; white-space: normal;width: 20%">@sp.SanPham.MoTa</td>
+                <td><img src="@Url.Content(sp.SanPham.Hinh)" style="width:70px;height:70px" /></td>
+                <td>@sp.SanPham.LoaiSanPham.TenLoaiSP</td>
+                <td style="width:10%">
+                    <a href="/Admin/Adjust?masp=@sp.MaSP&size=@sp.Size">
+                        <button style="border:none;background-color:white">
+                            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #187b25;"></i>
+                        </button>
+                    </a>
+                </td>
+                <td style="width:10%">
+                    <button style="border:none;background-color:white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash fa-lg" style="color: #ff2e2e;"></i>
+                    </button>
+                    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Xóa sản phẩm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bạn có chắc chắn muốn xóa sản phẩm này không?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                    <a href="/Admin/delete?masp=@sp.MaSP&&size=@sp.Size">
+                                        <button type="button" class="btn btn-primary">Xác nhận</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            stt++;
+        }
+
+    </tbody>
+</table>
+<div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if (ViewBag.page > 0)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="/Admin/Index?page=@(ViewBag.page-1)&order=@(Request["order"] ?? string.Empty)&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <a class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            }
+            @for (double i = 1; i <= ViewBag.totalpage; i++)
+            {
+                if (ViewBag.page == i - 1)
+                {
+                    <li class="page-item active"><a class="page-link" href="/Admin/Index?page=@(i-1)&order=@(Request["order"] ?? string.Empty)&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)">@i</a></li>
+                }
+                else
+                {
+                    <li class="page-item"><a class="page-link" href="/Admin/Index?page=@(i-1)&order=@(Request["order"] ?? string.Empty)&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)">@i</a></li>
+                }
+            }
+            @if (ViewBag.page < ViewBag.totalpage)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="/Admin/Index?page=@(ViewBag.page+1)&order=@(Request["order"] ?? string.Empty)&size=@(Request["size"] ?? string.Empty)&loaisp=@(Request["loaisp"] ?? string.Empty)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <a class="page-link" href="" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

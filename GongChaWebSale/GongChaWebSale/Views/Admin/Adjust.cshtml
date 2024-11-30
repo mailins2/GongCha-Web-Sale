@@ -1,0 +1,39 @@
+﻿@model GongChaWebSale.Models.banggia
+@{
+    ViewBag.Title = "Adjust";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center;margin:20px 0">Chỉnh sửa sản phẩm</h2>
+<div style="width: 70%; margin:auto">
+    <form action="/Admin/Adjust" method="post" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.MaSP)
+        @Html.HiddenFor(model => model.Size)
+        <div class="mb-3">
+            <label class="form-label">Tên sản phẩm</label>
+            <input type="text" name="SanPham.TenSP" id="TenSP" value="@Model.SanPham.TenSP" class="form-control">
+        </div>
+        <span>Size: </span>
+        <span>@Model.Size</span>
+        <div class="mb-3">
+            <label class="form-label">Đơn giá </label>
+            <input name="DonGia" type="text" id="DonGiaDisplay" value="@Model.DonGia" class="form-control" aria-label="Amount (to the nearest dollar)" oninput="syncHiddenInput()">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mô tả </label>
+            <textarea name="SanPham.MoTa" id="MoTa" class="form-control" rows="3">@Model.SanPham.MoTa</textarea>
+        </div>
+        <select name="SanPham.LoaiSanPham.TenLoaiSP" id="SanPham.LoaiSanPham.TenLoaiSP" class="form-select">
+            @foreach (var loai in ViewBag.loaisp)
+            {
+                <option value="@loai" @(loai == Model.SanPham.LoaiSanPham.TenLoaiSP ? "selected" : "")>@loai</option>
+            }
+        </select>
+        <div class="mb-3">
+            <label class="form-label">Hình ảnh </label>
+            <input name="imageFile" type="file" class="input-group-text">
+        </div>
+        <button type="submit" class="btn btn-primary">Xác nhận</button>
+    </form>
+</div>
+

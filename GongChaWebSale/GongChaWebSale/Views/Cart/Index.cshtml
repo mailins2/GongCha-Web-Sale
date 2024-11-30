@@ -107,21 +107,23 @@
                                 </td>
                                 <td>@item.TongTienSP.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</td>
                                 <td>
-                                    <form action="/Cart/Delete" method="post" style="display:flex">
-                                        <input type="hidden" value="@item.MaGH" name="MaGH" />
-                                        <input type="hidden" value="@item.MaSP" name="MaSP" />
-                                        <input type="hidden" value="@item.Size" name="Size" />
-                                        <input type="hidden" value="@item.MaTP" name="MaTP" />
-                                        <button type="submit" class="btn btn-outline-warning">Xóa</button>
-                                    </form>
-                                    <form action="/Cart/Edit" method="post" style="display:flex">
-                                        <input type="hidden" value="@item.MaGH" name="MaGH" />
-                                        <input type="hidden" value="@item.MaSP" name="MaSP" />
-                                        <input type="hidden" value="@item.Size" name="Size" />
-                                        <input type="hidden" value="@item.MaTP" name="MaTP" />
+                                    <div style="display:flex">
+                                        <form action="/Cart/Delete" method="post" style="display:flex">
+                                            <input type="hidden" value="@item.MaGH" name="MaGH" />
+                                            <input type="hidden" value="@item.MaSP" name="MaSP" />
+                                            <input type="hidden" value="@item.Size" name="Size" />
+                                            <input type="hidden" value="@item.MaTP" name="MaTP" />
+                                            <button type="submit" class="btn btn-outline-warning">Xóa</button>
+                                        </form>
+                                        <form action="/Cart/Edit" method="post" style="display:flex">
+                                            <input type="hidden" value="@item.MaGH" name="MaGH" />
+                                            <input type="hidden" value="@item.MaSP" name="MaSP" />
+                                            <input type="hidden" value="@item.Size" name="Size" />
+                                            <input type="hidden" value="@item.MaTP" name="MaTP" />
 
-                                        <button type="submit" class="btn btn-outline-warning">Sửa</button>
-                                    </form>
+                                            <button type="submit" class="btn btn-outline-warning">Sửa</button>
+                                        </form>
+                                    </div>
 
                                 </td>
 
@@ -131,7 +133,7 @@
 
                     }
                     <tr>
-                        <td colspan="7">
+                        <td colspan="8">
                             <p style=" display:flex;justify-content:end"> Thanh toán : @tmp.TongTien.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
                         </td>
                     </tr>

@@ -3,9 +3,9 @@ ON giohang_sanpham
 AFTER INSERT
 AS
 BEGIN
-    UPDATE giohang
+    UPDATE giohangs
     SET tongtien = tongtien + i.tongtiensp
-    FROM giohang g
+    FROM giohangs g
     INNER JOIN inserted i ON g.magh = i.magh;
 END;
 go
@@ -15,15 +15,15 @@ AFTER UPDATE
 AS
 BEGIN
     -- Trừ tổng tiền cũ
-    UPDATE giohang
+    UPDATE giohangs
     SET tongtien = tongtien - d.tongtiensp
-    FROM giohang g
+    FROM giohangs g
     INNER JOIN deleted d ON g.magh = d.magh;
 
     -- Cộng tổng tiền mới
-    UPDATE giohang
+    UPDATE giohangs
     SET tongtien = tongtien + i.tongtiensp
-    FROM giohang g
+    FROM giohangs g
     INNER JOIN inserted i ON g.magh = i.magh;
 END;
 go
@@ -32,9 +32,13 @@ ON giohang_sanpham
 AFTER DELETE
 AS
 BEGIN
-    UPDATE giohang
+    UPDATE giohangs
     SET tongtien = tongtien - d.tongtiensp
-    FROM giohang g
+    FROM giohangs g
     INNER JOIN deleted d ON g.magh = d.magh;
 END;
+
+drop trigger trg_InsertGioHangSanPham
+drop trigger trg_UpdateGioHangSanPham
+drop trigger trg_DeleteGioHangSanPham
 

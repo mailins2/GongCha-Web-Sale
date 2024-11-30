@@ -59,11 +59,11 @@ namespace GongChaWebSale.Controllers
             }
             return RedirectToAction("Index", "Cart");
         }
-     
+
 
 
         [HttpPost]
-     
+
         public ActionResult SaveChanges(giohang_sanpham editedItem)
         {
             if (ModelState.IsValid)
@@ -77,27 +77,28 @@ namespace GongChaWebSale.Controllers
                 {
                     // Cập nhật các thuộc tính không thuộc khóa chính
                     existingItem.SoLuong = editedItem.SoLuong;
-                    
-                    
+                    //existingItem.Topping = editedItem.Topping;
+                    //existingItem.Size = editedItem.Size;
 
-                    // Tính giá tiền và cập nhật
-                    //var gia = db.Banggias.FirstOrDefault(t => t.MaSP == editedItem.MaSP && t.Size == editedItem.Size);
-                 
-                    //var km = db.khuyenMais.FirstOrDefault(t => t.MaSP == editedItem.MaSP);
 
-                    //if (km != null && km.NgayKetThuc > DateTime.Now)
-                    //{
-                    //    existingItem.TongTienSP = editedItem.SoLuong * gia.DonGia - (km.Ptgiam * gia.DonGia / 100);
-                    //}
-                    //else
-                    //{
-                    //    existingItem.TongTienSP = (decimal)editedItem.SoLuong * gia.DonGia;
-                    //}
+                    //Tính giá tiền và cập nhật
+                    var gia = db.Banggias.FirstOrDefault(t => t.MaSP == editedItem.MaSP && t.Size == editedItem.Size);
+
+                    var km = db.khuyenMais.FirstOrDefault(t => t.MaSP == editedItem.MaSP);
+
+                    if (km != null && km.NgayKetThuc > DateTime.Now)
+                    {
+                        existingItem.TongTienSP = editedItem.SoLuong * gia.DonGia - (km.Ptgiam * gia.DonGia / 100);
+                    }
+                    else
+                    {
+                        existingItem.TongTienSP = (decimal)editedItem.SoLuong * gia.DonGia;
+                    }
 
                     try
                     {
                         db.SaveChanges();
-                        
+
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException ex)
                     {

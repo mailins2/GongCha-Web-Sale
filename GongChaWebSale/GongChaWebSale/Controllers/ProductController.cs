@@ -12,13 +12,14 @@ namespace GongChaWebSale.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        public ActionResult Index(string sortOrder,int page = 1, int id = 0 )
+        public ActionResult Index(string sortOrder, int page = 1, int id = 0, string search = "")
         {
             mydbcontext db = new mydbcontext();
-            List<banggia> sp = db.Banggias.Where(row => row.Size == "M").ToList();
+            List<banggia> sp = db.Banggias.Where(row => row.Size == "M" && row.SanPham.TenSP.Contains(search)).ToList();
+            ViewBag.search = search;
 
             ViewBag.Khuyenmai = db.khuyenMais.Where(row => row.Size == "M").ToList();
-          
+
             //sort
             switch (sortOrder)
             {
@@ -27,14 +28,9 @@ namespace GongChaWebSale.Controllers
                         sp = sp.OrderBy(row => row.MaSP).ToList();
                         break;
                     }
-                case "giathapcao":
-                    {
-                        sp = sp.OrderBy(p => p.DonGia).ToList(); 
-                        break;
-                    }
                 case "giacaothap":
                     {
-                        sp = sp.OrderByDescending(p =>p.DonGia).ToList();
+                        sp = sp.OrderByDescending(p => p.DonGia).ToList();
                         break;
                     }
                 default:

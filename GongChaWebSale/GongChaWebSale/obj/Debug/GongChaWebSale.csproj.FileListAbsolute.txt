@@ -944,3 +944,5 @@ D:\Học tập\lập trình web\Do an chinh 4\GongCha-Web-Sale\GongChaWebSale\Go
 D:\Học tập\lập trình web\Do an chinh 4\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaW.62F9FAD0.Up2Date
 D:\Học tập\lập trình web\Do an chinh 4\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.dll
 D:\Học tập\lập trình web\Do an chinh 4\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.pdb
+C:\Users\Acer\OneDrive\ドキュメント\github\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.Migrations.AddNgayTaoOnHD.resources
+C:\Users\Acer\OneDrive\ドキュメント\github\GongCha-Web-Sale\GongChaWebSale\GongChaWebSale\obj\Debug\GongChaWebSale.Migrations.AddUpNgayTao.resources

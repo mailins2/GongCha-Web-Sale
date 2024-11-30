@@ -99,9 +99,6 @@
                             <a class="nav-link active" aria-current="page" href="/Home" style="font-size: 20px; font-weight: bold; margin: 0 20px; color: #d6df7e ">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 20px; font-weight: bold; margin: 0 20px; color: #d6df7e">Giới thiệu</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/SaleOff/Index" style="font-size: 20px; font-weight: bold; margin: 0 20px; color: #d6df7e">Khuyến mãi</a>
                         </li>
                         <li class="nav-item">
@@ -109,8 +106,8 @@
                         </li>
                     </ul>
                     <div style="width:500px; height: 40px;margin-left: 10px; border-radius: 38px; border:none; position:relative; background-color: white">
-                        <form class="d-flex">
-                            <input style="width:400px; height: 40px;margin-left: 10px; border-radius: 38px; border:none;" type="search" placeholder="Tìm kiếm " aria-label="Search">
+                        <form class="d-flex" role=" search" action="/Product/Index">
+                            <input style="width:400px; height: 40px;margin-left: 10px; border-radius: 38px; border:none;" type="search" placeholder="Tìm kiếm " aria-label="Search" name="search" value="@ViewBag.search">
                             <button style="position:absolute; background-color:transparent; right:10px;height:40px;border:none" type="submit"><i style="color: #187b25 " class="fa-solid fa-magnifying-glass fa-lg"></i></button>
                         </form>
                     </div>
@@ -139,9 +136,11 @@
                             </li>
                         }
                           
-                        <li class="nav-item">
-                            <i style="margin: 0 30px; color: #d6df7e; cursor: pointer" class="fa-solid fa-bag-shopping fa-2xl" style="color: #ffffff;"></i>
-                        </li>
+                            <li class="nav-item">
+                                <a href="/Cart/Index">
+                                    <i style="margin: 0 30px; color: #d6df7e; cursor: pointer" class="fa-solid fa-bag-shopping fa-2xl" style="color: #ffffff;"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>

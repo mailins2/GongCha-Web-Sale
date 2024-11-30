@@ -60,12 +60,6 @@
             <div style="border: none; text-align: center; width: 1200px; padding: 10px;
                         background-color: #D6DF7E; font-size: large; font-weight: 500;">TẤT CẢ</div>
             <form action="/Product/Index" style="margin-left: 10px; margin-top: 20px">
-                <span style=" font-family:100px; font-weight: 700; color: #8f8f8f; ">Sắp xếp theo : </span>
-                <select id="sortOder" name="sortOder" onchange="this.form.submit()" style="padding: 5px; border-radius: 3px; width: 20%; ">
-                    <option value="Masp" @(Request.QueryString["sortOder"] == "Masp" ? "selected" : "")>...</option>
-                    <option value="giathapcao" @(Request.QueryString["sortOder"] == "giathapcao" ? "selected" : "")>Giá thấp - cao </option>
-                    <option value="giacaothap" @(Request.QueryString["sortOder"] == "giacaothap" ? "selected" : "")>Giá cao - thấp </option>
-                </select>
             </form>
             <div class="row row-cols-1 row-cols-md-3 g-4 " style=" width: 1200px; margin: 10px 0px 20px 0px;">
                 @foreach (var item in Model)

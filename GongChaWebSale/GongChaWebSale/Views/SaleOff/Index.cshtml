@@ -43,7 +43,7 @@
             @foreach (var sp in Model.Where(row => row.Makm == ViewBag.makm).ToList())
             {
                 <div class="card" style="width: 18rem; box-shadow: 0px 0px 5px 5px #eeeeee;position:relative;margin-bottom:20px">
-                    <a href="" style="text-decoration:none">
+                    <a href="/Product/Details?id=@sp.MaSP" style="text-decoration:none">
                         <div style="border-radius: 100%; padding: 10px; background-color: #FAA49A; width: 45px; height: 45px; display: flex; justify-content: center; align-content: center; position: absolute; top: 10px; right: 10px ">
                             <p style="font-weight: bold; color: #C4391D ">@((sp.Ptgiam * 100).ToString("0"))%</p>
                         </div>

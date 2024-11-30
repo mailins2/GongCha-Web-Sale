@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\H\u1ECDc t\u1EADp\\l\u1EADp tr\u00ECnh web\\Do an chinh 4\\GongCha-Web-Sale\\GongChaWebSale\\",
+  "WorkspaceRootPath": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|d:\\h\u1ECDc t\u1EADp\\l\u1EADp tr\u00ECnh web\\do an chinh 4\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\gongchawebsale\\views\\shared\\_layoutpageuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\shared\\_layoutpageuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\shared\\_layoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|c:\\users\\acer\\onedrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\gongcha-web-sale\\gongchawebsale\\gongchawebsale\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F229605-0BBB-4CA7-9786-DE26E4B10EEA}|GongChaWebSale\\GongChaWebSale.csproj|solutionrelative:gongchawebsale\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +32,52 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\H\u1ECDc t\u1EADp\\l\u1EADp tr\u00ECnh web\\Do an chinh 4\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "GongChaWebSale\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\H\u1ECDc t\u1EADp\\l\u1EADp tr\u00ECnh web\\Do an chinh 4\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Controllers\\HomeController.cs",
               "RelativeToolTip": "GongChaWebSale\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T11:58:20.105Z",
+              "WhenOpened": "2024-11-30T14:52:26.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_LayoutPageUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPageUser.cshtml",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Shared\\_LayoutPageUser.cshtml",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPageUser.cshtml*",
+              "RelativeToolTip": "GongChaWebSale\\Views\\Shared\\_LayoutPageUser.cshtml*",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:46:02.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LayoutPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml*",
+              "RelativeToolTip": "GongChaWebSale\\Views\\Shared\\_LayoutPage.cshtml*",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:51:54.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "GongChaWebSale\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Acer\\OneDrive\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\github\\GongCha-Web-Sale\\GongChaWebSale\\GongChaWebSale\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "GongChaWebSale\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAD0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:50:26.972Z",
               "EditorCaption": ""
             }
           ]

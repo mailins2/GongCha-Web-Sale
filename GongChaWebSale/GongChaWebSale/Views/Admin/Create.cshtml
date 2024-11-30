@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 style="text-align: center; margin: 20px 0">Thêm sản phẩm mới</h2>
+<div style="width: 80%; margin:auto">
+    <form action="/Admin/Create" method="Post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label">Tên sản phẩm</label>
+            <input name="SanPham.TenSP" type="text" class="form-control" placeholder="Nhập tên sản phẩm">
+        </div>
+        <span>Chọn size :</span>
+        <select name="Size" class="form-select" aria-label="Default select example">
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+        <div class="mb-3">
+            <label class="form-label">Đơn giá :</label>
+            <input name="DonGia" type="number" class="form-control" placeholder="Nhập đơn giá">
+        </div>
+        <select name="SanPham.LoaiSanPham.TenLoaiSP" id="SanPham.LoaiSanPham.TenLoaiSP" class="form-select">
+            @foreach (var loai in ViewBag.loaisp)
+            {
+                <option value="@loai">@loai</option>
+            }
+        </select>
+        <div class="mb-3">
+            <label class="form-label">Mô tả </label>
+            <textarea name="SanPham.MoTa" id="MoTa" class="form-control" rows="3" placeholder="Nhập mô tả sản phẩm"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Hình ảnh </label>
+            <input name="imageFile" type="file" class="input-group-text">
+        </div>
+        <button type="submit" class="btn btn-primary">Tạo mới</button>
+    </form>
+</div>
+
+
