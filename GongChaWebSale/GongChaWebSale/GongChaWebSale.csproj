@@ -192,8 +192,17 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KemController.cs" />
+    <Compile Include="Controllers\OkinawaController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SaleOffController.cs" />
+    <Compile Include="Controllers\ThucuongdacbietController.cs" />
+    <Compile Include="Controllers\ThucuongdaxayController.cs" />
+    <Compile Include="Controllers\ThucuongsangtaoController.cs" />
+    <Compile Include="Controllers\ToppingController.cs" />
+    <Compile Include="Controllers\TranguyenchatController.cs" />
+    <Compile Include="Controllers\TrasuaController.cs" />
+    <Compile Include="Controllers\TratraicayController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -259,7 +268,6 @@
     <None Include="packages.config" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\SaleOff\Index.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
@@ -268,6 +276,18 @@
     <Content Include="Views\User\HistoryPD.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Edit.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Kem\Index.cshtml" />
+    <Content Include="Views\Okinawa\Index.cshtml" />
+    <Content Include="Views\Thucuongdacbiet\Index.cshtml" />
+    <Content Include="Views\Thucuongdaxay\Index.cshtml" />
+    <Content Include="Views\Thucuongsangtao\Index.cshtml" />
+    <Content Include="Views\Topping\Details.cshtml" />
+    <Content Include="Views\Topping\Index.cshtml" />
+    <Content Include="Views\Tranguyenchat\Index.cshtml" />
+    <Content Include="Views\Trasua\Index.cshtml" />
+    <Content Include="Views\Tratraicay\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
