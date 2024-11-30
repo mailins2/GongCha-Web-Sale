@@ -3,23 +3,35 @@
     ViewBag.Title = "HistoryPD";
     Layout = "~/Views/Shared/_LayoutPageUser.cshtml";
 }
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success" id="successMessage">
+        <button onclick="closeMessage()" class="btn btn-small alert-success"><i class='bx bx-x'></i></button>
+        <p style="margin: 0;">@TempData["Message"]</p>
+    </div>
+
+
+
+}
 
 <div class="content p-3">
     <h5>Lịch sử mua hàng </h5>
-    
-        @foreach (var item in ViewBag.tt)
-        {
-            <a href="/User/HistoryPD/@item.MaTrangThai" class="btn btn-outline-primary btn-sm ">@item.TenTrangThai</a>
-        }
-        
+
+    @foreach (var item in ViewBag.tt)
+    {
+        <a href="/User/HistoryPD/@item.MaTrangThai" class="btn btn-outline-primary btn-sm ">@item.TenTrangThai</a>
+    }
+
 
 
 </div>
 
+
 <div class="order-card bg-white shadow-sm rounded p-3 mb-3 my-5">
-    <table class="table ">
-        @if (ViewBag.dh.Count==0)
-        {
+
+    @if (ViewBag.dh.Count == 0)
+    {
+        <table class="table table-hover">
             <tr>
                 <td>
                     <strong>Đơn hàng :  </strong>
@@ -33,51 +45,86 @@
                     <p style="display:flex;justify-content:center;padding:50px"> Không có dữ liệu</p>
                 </td>
             </tr>
-        }
-        @foreach (var tmp in ViewBag.dh)
-        {
-            <tr>
-                <td>
-                    <strong>Đơn hàng : @tmp.MaDH</strong>
-                </td>
-                <td colspan="5">
-                    <p class="mb-0 text-muted ">Trạng thái : @tmp.TrangThaiDonHang.TenTrangThai </p>
-                </td>
-            </tr>
-            foreach (var item in Model)
+        </table>
+
+    }
+    else
+    {
+        
+        <table class="table table-hover">
+            @foreach (var tmp in ViewBag.dh)
             {
-                if (item.MaDH == tmp.MaDH)
+                <tr>
+                    <td>
+                        <strong>Đơn hàng : @tmp.MaDH</strong>
+                    </td>
+                    <td colspan="5">
+                        <p class="mb-0 text-muted ">Trạng thái : @tmp.TrangThaiDonHang.TenTrangThai </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Sản phẩm
+                    </th>
+                    <th>Tên</th>
+                    <th>Size</th>
+                    <th>Topping</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                </tr>
+
+                foreach (var item in Model)
                 {
-                    <tr>
+                    if (item.MaDH == tmp.MaDH)
+                    {
 
-                        <td>
-                            <img src="@item.SanPham.Hinh" width="100px" />
-                        </td>
-                        <td>
-                            @item.SanPham.TenSP
-                        </td>
-                        <td>
-                            @item.Size
-                        </td>
-                        <td>
-                            <img src="@item.Topping.Hinh" width="100px" />
-                        </td>
-                        <td>
-                            @item.SoLuong
-                        </td>
-                        <td>@item.TongTienSP</td>
-                    </tr>
+                        <tr>
+
+                            <td>
+                                <img src="@Url.Content(item.SanPham.Hinh)" width="100px" />
+                            </td>
+                            <td>
+                                @item.SanPham.TenSP
+                            </td>
+                            <td>
+                                @item.Size
+                            </td>
+                            <td>
+                                <img src="@Url.Content(item.Topping.Hinh)" width="100px" />
+                            </td>
+                            <td>
+                                @item.SoLuong
+                            </td>
+                            <td>
+                                
+                            @item.TongTienSP.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</td>
+                        </tr>
+                    }
+
+
+
                 }
-
-
+                <tr>
+                    <td colspan="6">
+                        <p style=" display:flex;justify-content:end"> Thanh toán : @tmp.ThanhToan.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
+                    </td>
+                </tr>
             }
-        }
-    </table>
+        </table>
+        <div class="order-item d-flex align-items-center my-5  " style="margin:20px auto;justify-content:end">
+            <a href="/Users/DanhGia" class="btn btn-outline-warning btn-sm mx-2">Đánh giá</a>
+            <a href="" class="btn btn-outline-secondary btn-sm mx-2">Liên hệ người bán </a>
+            <a href="" class="btn btn-outline-primary btn-sm mx-2">Mua lại</a>
+        </div>
+    }
 
-    <div class="order-item d-flex align-items-center my-5  " style="margin:20px auto;justify-content:end">
-        <a href="/Users/DanhGia" class="btn btn-outline-warning btn-sm mx-2">Đánh giá</a>
-        <a href="" class="btn btn-outline-secondary btn-sm mx-2">Liên hệ người bán </a>
-        <a href="" class="btn btn-outline-primary btn-sm mx-2">Mua lại</a>
-    </div>
+
+
 </div>
 
+<script type="text/javascript">
+    function closeMessage() {
+        var message = document.getElementById("successMessage");
+        message.style.display = "none";
+    }
+</script>

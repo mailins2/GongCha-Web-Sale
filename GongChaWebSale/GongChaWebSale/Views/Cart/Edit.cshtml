@@ -1,0 +1,59 @@
+﻿@model GongChaWebSale.Models.giohang_sanpham
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPageUser.cshtml";
+}
+
+<form action="/Cart/SaveChanges" method="post" class="order-card bg-white shadow-sm rounded p-3 mb-3 my-5">
+    <div class="mb-3">
+        <label for="sanpham" class="form-label">Sản phẩm</label>
+        <div>
+            <img src="@Url.Content(Model.SanPham.Hinh)" width="100px" />
+            <p>@Model.SanPham.TenSP</p>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="size" class="form-label">Size</label>
+        <select id="size" name="Size" class="form-control">
+            @foreach (var size in ViewBag.Sizes)
+            {
+                <option value="@size" @(Model.Size == size ? "selected" : "")>@size</option>
+                }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="topping" class="form-label">Topping</label>
+        <select id="topping" name="MaTP" class="form-control">
+            <option value="">Không có</option>
+            @foreach (var topping in ViewBag.Toppings)
+            {
+                <option value="@topping.MaTP" @(Model.MaTP == topping.MaTP ? "selected" : "")>@topping.TenTP</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="soluong" class="form-label">Số lượng</label>
+        <input type="number" id="soluong" name="SoLuong" value="@Model.SoLuong" min="1" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="tongtien" class="form-label">Tổng tiền</label>
+        <input type="text" id="tongtien" name="TongTienSP" value="@Model.TongTienSP" class="form-control" readonly />
+    </div>
+
+    <input type="hidden" name="MaGH" value="@Model.MaGH" />
+    <input type="hidden" name="MaSP" value="@Model.SanPham.MaSP" />
+
+    <button type="submit" class="btn btn-outline-primary" style="width:100px;">Lưu</button>
+    <a href="/Cart/Index" class="btn btn-outline-secondary" style="width:100px;">Hủy</a>
+
+
+</form>
+
+
+
+
+

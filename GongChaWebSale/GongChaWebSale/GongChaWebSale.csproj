@@ -190,6 +190,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SaleOffController.cs" />
@@ -265,6 +266,8 @@
     <Content Include="Views\Shared\_LayoutPageUser.cshtml" />
     <Content Include="Views\User\ManageAccount.cshtml" />
     <Content Include="Views\User\HistoryPD.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

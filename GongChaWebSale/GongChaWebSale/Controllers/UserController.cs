@@ -113,66 +113,94 @@ namespace GongChaWebSale.Controllers
             TempData["Message"] = "Đăng xuất thành công";
             return RedirectToAction("Index", "Home");
         }
-        public ActionResult ManageAccount()
+        
+            // GET: User/ManageAccount
+            public ActionResult ManageAccount()
+            {
+               if(ModelState.IsValid)
+                {
+                    if (Session["UserID"] != null)
+                    {
+                        int userId = (int)Session["UserID"];
+                        var user = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
+
+                        if (user != null)
+                        {
+                            return View(user);
+                        }
+                       
+                    }
+                    return RedirectToAction("Index", "User");
+
+
+                }
+
+                return RedirectToAction("Index", "User");
+            }
+
+            // POST: User/ManageAccount
+            [HttpPost]
+
+       
+        public ActionResult ManageAccount(taikhoan user)
         {
             if (ModelState.IsValid)
             {
                 if (Session["UserID"] != null)
                 {
-                    int userId = (int)Session["UserID"];
-                    var user = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
-
-                    if (user != null)
+                    try
                     {
-                        return View(user);
+                        int userId = (int)Session["UserID"];
+                        var existingUser = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
+                     
 
+                        if (existingUser != null)
+                        {
+                            // Cập nhật các thuộc tính của tài khoản hiện có
+                            existingUser.TenTK = user.TenTK;
+                            existingUser.Email = user.Email;
+                            existingUser.SDT = user.SDT;
+                            existingUser.DiaChi = user.DiaChi;
+                            existingUser.MatKhau = user.MatKhau;
+                            existingUser.NgaySinh = user.NgaySinh;
+                            existingUser.MaLoaiTK = 2;
+
+                            // Lưu thay đổi vào cơ sở dữ liệu
+                            db.SaveChanges();
+                            TempData["Message"] = "Cập nhật thông tin thành công ";
+                            Session["UserName"] = existingUser.TenTK;
+                            return RedirectToAction("ManageAccount", "User");
+
+                            
+                        }
+                        else
+                        {
+                            TempData["Message"] = "Không tìm thấy tài khoản";
+                            return RedirectToAction("ManageAccount", "User");
+                        }
                     }
-
-
-                }
-            }
-            return RedirectToAction("Index", "User");
-        }
-
-        [HttpPost]
-        public ActionResult ManageAccount(taikhoan user) // Cập nhật thông tin tài khoản 
-        {
-            if (Session["UserID"] != null)
-            {
-                int userId = (int)Session["UserID"];
-                var existingUser = db.Taikhoans.FirstOrDefault(t => t.MaTK == userId);
-
-                if (existingUser != null)
-                {
-                    // Cập nhật các thuộc tính của tài khoản hiện có
-                    existingUser.TenTK = user.TenTK;
-                    existingUser.Email = user.Email;
-                    existingUser.SDT = user.SDT;
-                    existingUser.DiaChi = user.DiaChi;
-                    existingUser.MatKhau = user.MatKhau;
-                    existingUser.NgaySinh = user.NgaySinh;
-                    // Thêm các thuộc tính khác cần cập nhật
-                    existingUser.MaLoaiTK = 2;
-
-                    // Lưu thay đổi vào cơ sở dữ liệu
-                    db.SaveChanges();
-                    TempData["Message"] = "Cập nhật thông tin thành công ";
+                    catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+                    {
+                        foreach (var validationErrors in ex.EntityValidationErrors)
+                        {
+                            foreach (var validationError in validationErrors.ValidationErrors)
+                            {
+                                ModelState.AddModelError(validationError.PropertyName, validationError.ErrorMessage);
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    TempData["Message"] = "Không tìm thấy tài khoản";
+                    TempData["Message"] = "Phiên làm việc của bạn đã hết. Vui lòng đăng nhập lại.";
                 }
             }
-            else
-            {
-                TempData["Message"] = "Phiên làm việc của bạn đã hết. Vui lòng đăng nhập lại.";
-            }
 
-            return RedirectToAction("Index", "User");
+            return View(user);
         }
 
 
-
+        
         public ActionResult HistoryPD(int id = 0)
         {
             if (ModelState.IsValid)
@@ -197,10 +225,7 @@ namespace GongChaWebSale.Controllers
             }
             return RedirectToAction("Index", "User");
         }
-        public ActionResult DetailCart()
-        {
-            return View();
-        }
+      
 
     }
 }
