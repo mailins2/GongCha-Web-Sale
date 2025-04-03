@@ -5,7 +5,9 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-
+@{
+    int soluong = 0;
+}
 <div style="display:flex; justify-content: center;">
     <div class=" list-menu">
 
@@ -84,7 +86,7 @@
                             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-weight:500; width: 50%; height: 50px;">
                                 Mua ngay
                             </button>
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger float-end" style=" margin-left:5px; width: 10%; height: 50px; ">
+                            <button id="cart" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger float-end" style=" margin-left:5px; width: 10%; height: 50px; ">
                                 <a href="#" style="text-decoration: none;">
                                     <i class="fa-solid fa-cart-shopping" style="color: #e4e2e4;"></i>
                                 </a>
@@ -115,7 +117,8 @@
                         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-weight:500; width: 50%; height: 50px;">
                             Mua ngay
                         </button>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger float-end" style=" margin-left:5px; width: 10%; height: 50px; ">
+                        @*GIO HANG*@
+                        <button id="cart" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger float-end" style=" margin-left:5px; width: 10%; height: 50px; ">
                             <a href="#" style="text-decoration: none;">
                                 <i class="fa-solid fa-cart-shopping" style="color: #e4e2e4;"></i>
                             </a>
@@ -126,91 +129,126 @@
         }
 
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #C4391D">Chọn món mới</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        @*<div style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">Chọn Size </div>*@
-                        <table class="table">
+        @if (HttpContext.Current.Session["UserName"] != null)
+        {
+            <form action="/Product/AddCart" method="post" style="width:60%;margin:20px auto">
+                <input type="hidden" name="MaSP" value="@Model.Select(row=>row.MaSP).FirstOrDefault()" />
+                <input type="hidden" name="SoLuong" id="hiddenQuantity">
+                <input type="hidden" name="MaTK" value="@HttpContext.Current.Session["UserID"]" />
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #C4391D">Chọn món mới</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                @*<div style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">Chọn Size </div>*@
+                                <table class="table">
 
-                            <tr style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">
-                                <td colspan="2" style="border: none;">Chọn Size</td>
-                            </tr>
-                            <tr>
-                                @foreach (var item in Model)
-                                {
-                                    bool flag = false;
-                                    foreach (var km in ViewBag.Khuyenmai)
-                                    {
-                                        if ((item.MaSP == km.MaSP && item.Size == "M") || (item.MaSP == km.MaSP && item.Size == "L"))
+                                    <tr style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">
+                                        <td colspan="2" style="border: none;">Chọn Size</td>
+                                    </tr>
+                                    <tr>
+                                        @foreach (var item in Model)
                                         {
-                                            flag = true;
-                                        <tr>
-                                            <td>
-                                                <h5 style="font-size: 18px;">@item.Size </h5>
-                                                <p>@(((item.DonGia) - (item.DonGia * km.Ptgiam)).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</p>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            bool flag = false;
+                                            foreach (var km in ViewBag.Khuyenmai)
+                                            {
+                                                if ((item.MaSP == km.MaSP && item.Size == "M") || (item.MaSP == km.MaSP && item.Size == "L"))
+                                                {
+                                                    flag = true;
+                                                <tr>
+                                                    <td>
+                                                        <h5 style="font-size: 18px;">@item.Size </h5>
+                                                        <p>@(((item.DonGia) - (item.DonGia * km.Ptgiam)).ToString("N0", new System.Globalization.CultureInfo("vi-VN")))đ</p>
+                                                    </td>
+                                                    <td>
+                                                        <div>
+                                                            <input name="Size" class="form-check-input" type="checkbox" id="checkboxNoLabel" value="@item.Size" aria-label="...">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                        if (!flag)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <h5 style="font-size: 18px;">@item.Size </h5>
+                                                    <p>@item.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <input name="Size" class="form-check-input" type="checkbox" id="checkboxNoLabel" value="@item.Size" aria-label="...">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
                                     }
-                                }
-                                if (!flag)
-                                {
-                                    <tr>
-                                        <td>
-                                            <h5 style="font-size: 18px;">@item.Size </h5>
-                                            <p>@item.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                }
-                            }
-                                </tr>
-                                <tr style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">
-                                    <td colspan="2" style="border:none;">Chọn Topping</td>
-                                </tr>
-                                @foreach (var tp in ViewBag.Topping)
-                                {
-                                    <tr>
-                                        <td>
-                                            <h5 style="font-size: 18px;">@tp.TenTP</h5>
-                                            <p style="font-size: 15px;">@tp.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                }
-                            </table>
+                                        </tr>
+                                        <tr style=" padding-top:5px; padding-bottom: 5px;padding-left: 10px; font-weight: 600;border: none; background-color: #dddddd; height: 30px; color:gray;">
+                                            <td colspan="2" style="border:none;">Chọn Topping</td>
+                                        </tr>
+                                        @*@{
+                                                int index = 0;
+                                            }*@
+
+                                        @foreach (var tp in ViewBag.Topping)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <h5 style="font-size: 18px;">@tp.TenTP</h5>
+                                                    <p style="font-size: 15px;">@tp.DonGia.ToString("N0", new System.Globalization.CultureInfo("vi-VN"))đ</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <input name="dstopping" class="form-check-input" type="checkbox" id="checkboxNoLabel" value="@tp.MaTP" aria-label="..." />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            //index++;
+                                        }
+                                    </table>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Mua ngay</button>
+                                        @*GIO HANG*@
+                                        <button type="submit" class="btn btn-danger float-end" style=" height: 38px;">
+                                            <i class="fa-solid fa-cart-shopping" style="color: #e4e2e4; "></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <input type="hidden" name="SoLuong" id="hiddenQuantity">
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn cần đăng nhập để thêm vào giỏ hàng</p>
+                            </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Mua ngay</button>
-                                <button type="button" class="btn btn-outline-danger" style=" height: 38px;">
-                                    <a href="#" style="text-decoration: none;">
-                                        <i class="fa-solid fa-cart-shopping" style="color: #e4e2e4;"></i>
-                                    </a>
-                                </button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <a href="/User" type="button" class="btn btn-primary">Đăng nhập</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            }
     </div>
-    <script>
+</div>
+
+
+<script>
     function increase() {
         let quantityInput = document.getElementById('quantity');
         let currentQuantity = parseInt(quantityInput.value);
@@ -223,4 +261,38 @@
             quantityInput.value = currentQuantity - 1;
         }
     }
+</script>
+
+<script>
+    // Lấy giá trị số lượng và đưa vào input ẩn trước khi submit
+    document.getElementById('cart').addEventListener('click', function () {
+        let visibleQuantity = document.getElementById('quantity').value;
+        document.getElementById('hiddenQuantity').value = visibleQuantity;
+    })
+</script>
+
+@if (TempData["CartUpdated"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cartSuccessModal = new bootstrap.Modal(document.getElementById("cartSuccessModal"));
+            cartSuccessModal.show();
+        });
     </script>
+}
+<div class="modal fade" id="cartSuccessModal" tabindex="-1" aria-labelledby="cartSuccessLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartSuccessLabel">Cập nhật giỏ hàng thành công</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Sản phẩm đã được thêm vào giỏ hàng của bạn!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>

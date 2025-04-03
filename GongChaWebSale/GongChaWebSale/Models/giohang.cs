@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace GongChaWebSale.Models
 {
     public class giohang
     {
         [Key]
         public int MaGH { get; set; }
-        [Required] 
+        [Required]
         public int MaTK { get; set; }
         [DataType(DataType.DateTime)] 
         public DateTime NgayTao { get; set; } = DateTime.Now;
